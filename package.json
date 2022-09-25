@@ -1,16 +1,24 @@
 {
   "name": "vueadmin",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": {
+    "name": "SongGuorong",
+    "email": "grs59680@gmail.com",
+    "url": "https://github.com/SongGuorong/vueAdmin"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173"
   },
   "dependencies": {
-    "vue": "^3.2.38"
+    "vue": "^3.2.38",
+    "vue-router": "^4.1.5",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
+    "element-plus": "^2.2.17",
     "vite": "^3.0.9"
   }
 }
