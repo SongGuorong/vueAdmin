@@ -86,7 +86,7 @@ export default {
         tag: 'Tag',
         breadcurmb: 'Breadcurmb',
         fixed: 'fixed Header',
-        fullscreen: 'Fuscreen',
+        fullscreen: 'FullScreen',
         refresh: 'Refresh',
         notice: 'Notice',
         defaultBtn: 'Restore the default',
@@ -170,7 +170,7 @@ export default {
             label2: 'Type',
             label3: 'Options',
             label4: 'Default',
-            label5: 'Descrition',
+            label5: 'Description',
         },
     },
     element: {

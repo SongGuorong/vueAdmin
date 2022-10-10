@@ -3,7 +3,7 @@
     <el-form-item prop="username">
       <el-input :placeholder="t('login.username')" v-model="ruleForm.username">
         <template>
-          <user theme="outline" size="16" fill="#999"/>
+          <icon-user theme="outline" size="16" fill="#999"/>
         </template>
       </el-input>
     </el-form-item>
@@ -11,7 +11,7 @@
     <el-form-item prop="password">
       <el-input :placeholder="t('login.password')" type="password" v-model="ruleForm.password" @keyup.enter="handleLogin">
         <template>
-          <lock theme="outline" size="16" fill="#999"/>
+          <icon-lock theme="outline" size="16" fill="#999"/>
         </template>
       </el-input>
     </el-form-item>
@@ -33,11 +33,11 @@
 
     <el-form-item>
       <div class="login-methods">
-        <wechat theme="outline" size="24" fill="#333" />
-        <alipay theme="outline" size="24" fill="#333" />
-        <github theme="outline" size="24" fill="#333" />
-        <twitter theme="outline" size="24" fill="#333" />
-        <google theme="outline" size="24" fill="#333" />
+        <icon-wechat theme="outline" size="24" fill="#333" />
+        <icon-alipay theme="outline" size="24" fill="#333" />
+        <icon-github theme="outline" size="24" fill="#333" />
+        <icon-twitter theme="outline" size="24" fill="#333" />
+        <icon-google theme="outline" size="24" fill="#333" />
       </div>
     </el-form-item>
   </el-form>

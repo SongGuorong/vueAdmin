@@ -1,5 +1,5 @@
 <script setup>
-import Count from "./components/Count.vue";
+
 </script>
 
 <template>
@@ -8,7 +8,6 @@ import Count from "./components/Count.vue";
   </header>
 
   <main>
-    <Count />
   </main>
 </template>
 
