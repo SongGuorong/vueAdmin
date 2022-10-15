@@ -30,7 +30,6 @@ export default {
         size: 'Global Size',
         profile: 'Profile',
     },
-
     login: {
         title: 'Login',
         rules: {

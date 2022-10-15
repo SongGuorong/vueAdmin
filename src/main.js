@@ -1,15 +1,8 @@
 import {createApp} from 'vue';
-import { createStore } from 'vuex'
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
-import App from './App.vue'
-
-
-
+import { createStore } from 'vuex';
+import App from './App.vue';
 
 // 根组件
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(ElementPlus)
-
-app.mount('#app')
+app.mount('#app');

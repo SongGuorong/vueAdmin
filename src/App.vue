@@ -1,4 +1,7 @@
 <script setup>
+import LoginForm from '@/views/login/comp/LoginForm';
+
+
 
 </script>
 
