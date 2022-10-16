@@ -1,6 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import {createApp} from 'vue';
+import { createStore } from 'vuex';
+import App from './App.vue';
 
-import './assets/main.css'
+// 根组件
+const app = createApp(App);
 
-createApp(App).mount('#app')
+app.mount('#app');
