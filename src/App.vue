@@ -1,44 +1,55 @@
-<script setup>
-import LoginForm from '@/views/login/comp/LoginForm';
-
-
-
-</script>
-
 <template>
-  <header>
-    <!--    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />-->
-  </header>
-
-  <main>
-  </main>
+  <el-config-provider :locale="localLanguage">
+    <el-scrollbar height="100vh" ref="scroll">
+      <router-view/>
+    </el-scrollbar>
+  </el-config-provider>
 </template>
 
+<script setup>
+import {useStore} from "vuex";
+import {computed, onMounted, ref, watch} from "vue";
+import i18n from "@/locales";
+import {useRouter} from "vue-router";
+
+const store = useStore();
+
+const locale = i18n.global.locale;
+const localLanguage = computed(() => {
+  const isDev = process.env.NODE_ENV === "development";
+  if (isDev) {
+    return i18n.global.messages.value[locale.value];
+  } else {
+    return i18n.global.messages[locale];  // 支持语言列表
+  }
+});
+
+const scroll = ref(null);
+
+const router = useRouter();
+onMounted(() => {
+  changeBodyWidth();
+  window.addEventListener('resize', changeResize);
+});
+
+// 监听，路由变化，滚动到最上面
+watch(
+    () => router.currentRoute.value,
+    () => {
+      scroll.value.setScrollTop(0);
+    }
+);
+
+const changeBodyWidth = () => {
+  const flag = document.body.getBoundingClientRect().width - 1 < 992;
+  store.dispatch('setting/changeMobile', flag);
+};
+
+const changeResize = () => {
+  changeBodyWidth();
+};
+</script>
+
 <style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>

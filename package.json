@@ -44,7 +44,6 @@
     "@vue/compiler-sfc": "^3.2.40",
     "@vue/eslint-config-prettier": "^7.0.0",
     "autoprefixer": "^10.4.12",
-    "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.25.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -62,9 +61,7 @@
     "unplugin-icons": "^0.14.11",
     "unplugin-vue-components": "^0.22.8",
     "vite": "^3.1.8",
-    "vite-plugin-babel-import": "^2.0.5",
     "vite-plugin-element-plus": "^0.0.12",
-    "vite-plugin-mock": "^2.9.6",
-    "vite-plugin-style-import": "^2.0.0"
+    "vite-plugin-mock": "^2.9.6"
   }
 }

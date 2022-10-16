@@ -18,6 +18,7 @@ const messages = {
     },
 };
 
+// 获取当前语言环境: sting
 export const getLocale = () => {
     const cookieLanguage = getLanguage();
     if (cookieLanguage) {
@@ -31,7 +32,7 @@ export const getLocale = () => {
         }
     }
     return 'zh-cn';
-}
+};
 
 const i18n = createI18n({
     locale: getLocale(),

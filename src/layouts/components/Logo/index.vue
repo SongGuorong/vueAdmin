@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <svg-icon></svg-icon>
+  <div @click="" class="" :class="">
+    <svg-icon />
   </div>
 
 </template>
