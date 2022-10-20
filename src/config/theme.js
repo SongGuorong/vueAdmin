@@ -29,7 +29,7 @@ export const themeConfig = {
     // 是否固定头部
     fixedHead: true,
     // 是否显示全屏
-    fullScreen: true,
+    fullScreen: false,
     // 是否显示刷新
     refresh: true,
     // 是否显示通知

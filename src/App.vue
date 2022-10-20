@@ -1,13 +1,15 @@
 <template>
-  <el-config-provider :locale="localLanguage">
-    <el-scrollbar height="100vh" ref="scroll">
-      <router-view/>
-    </el-scrollbar>
-  </el-config-provider>
+  <div id="app">
+    <el-config-provider :locale="localLanguage">
+      <el-scrollbar height="100vh" ref="scroll">
+        <router-view/>
+      </el-scrollbar>
+    </el-config-provider>
+  </div>
 </template>
 
 <script setup>
-import {useStore} from "vuex";
+import {useStore} from "vuex";   // 在setup钩子函数中访问store
 import {computed, onMounted, ref, watch} from "vue";
 import i18n from "@/locales";
 import {useRouter} from "vue-router";
@@ -22,7 +24,7 @@ const localLanguage = computed(() => {
   } else {
     return i18n.global.messages[locale];  // 支持语言列表
   }
-});
+});   // localLanguage使用computed计算属性编程响应式变量
 
 const scroll = ref(null);
 
@@ -50,6 +52,12 @@ const changeResize = () => {
 };
 </script>
 
-<style scoped>
-
+<style lang="scss">
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-size: $base-font-size-default;
+    color: #2c3e50;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 </style>

@@ -6,6 +6,13 @@
 </template>
 
 <script setup>
+import {useStore} from "vuex";
+import {useRouter} from "vue-router";
+import {themeConfig} from '@/config/theme';
+
+const store = useStore();
+const router = useRouter();
+
 
 
 </script>
