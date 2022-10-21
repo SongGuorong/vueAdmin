@@ -46,6 +46,7 @@ const getters = {
     mode: (state) => state.mode,
     lang: (state) => state.lang,
     settings: (state) => state,
+    collapse: (state) => state.collapse,   // 是否展开
 };
 
 // mutations(同步执行)
@@ -142,12 +143,4 @@ const actions = {
     },
 };
 
-export default {
-    state,
-    getters,
-    mutations,
-    actions,
-};
-
-
-
+export default {state, getters, mutations, actions};
