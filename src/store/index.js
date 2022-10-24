@@ -1,5 +1,5 @@
 import {createStore} from "vuex";
-
+import getters from '@/store/getters';
 
 const modulesFiles = import.meta.globEager('./modules/*.js');  // ./modules/routes.js
 
@@ -15,8 +15,8 @@ Object.keys(modules).forEach((key) => {
 });
 
 const store = createStore({
-    modules: modules,
-    getters: getters,
+    modules,
+    getters,
 });
 
 export default store;
