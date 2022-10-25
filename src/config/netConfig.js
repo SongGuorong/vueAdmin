@@ -19,5 +19,5 @@ export const netConfig = {
     // 登录失效code
     invalidCode: -1,
     // 无权限code
-    noPermissionCode: -1,
+    noPermissionCode: -2,
 };
