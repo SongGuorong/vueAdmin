@@ -1,6 +1,6 @@
 const getters = {
-    userinfo: (state) => state.user.userinfo,
-    token: (state) => state.user.token,
+    collapse: (state) => state.setting.collapse,
+    fullScreen: (state) => state.setting.fullScreen,
 };
 
 export default getters;

@@ -53,8 +53,8 @@ export const asyncRoutes = [
       component: Layout,
       name: 'Comp',
       meta: {
-        title: global.t('route.components'),
-        icon: 'icon-code',
+         title: global.t('route.components'),
+         icon: 'icon-code',
       },
       children: [
          {
@@ -141,21 +141,26 @@ export const asyncRoutes = [
          },
       ],
    },
+   // {
+   //    path: '*',
+   //    redirect: '/404',
+   //    hidden: true,
+   // },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes: constantRoutes,
+   history: createWebHashHistory(),
+   routes: constantRoutes,
 });
 
 // reset router
 export function resetRouter() {
-  router.getRoutes().forEach((route) => {
-    const {name} = route;
-    if (name) {
-      router.hasRoute(name) && router.removeRoute(name);
-    }
-  });
+   router.getRoutes().forEach((route) => {
+      const {name} = route;
+      if (name) {
+         router.hasRoute(name) && router.removeRoute(name);
+      }
+   });
 }
 
 export default router;

@@ -1,6 +1,9 @@
 import {createApp} from 'vue';
 import App from './App.vue';
 
+// 路由权限/导航进度条
+import '@/config/permission';
+
 // clipboard
 import {VueClipboard} from '@soerenmartius/vue3-clipboard';
 // router
