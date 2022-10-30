@@ -44,7 +44,7 @@ watch(
 
 const changeBodyWidth = () => {
   const flag = document.body.getBoundingClientRect().width - 1 < 992;
-  store.dispatch('setting/changeMobile', flag);
+  store.dispatch('setting/changeMobile', flag);   // 判断是否是mobile
 };
 
 const changeResize = () => {
@@ -53,11 +53,11 @@ const changeResize = () => {
 </script>
 
 <style lang="scss">
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    font-size: $base-font-size-default;
-    color: #2c3e50;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-size: $base-font-size-default;
+  color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 </style>

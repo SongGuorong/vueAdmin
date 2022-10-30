@@ -114,15 +114,11 @@ export default defineConfig({
       }),
       svgBuilder('./src/icons/svg/'),
       // viteMockServe({
-      //     mockPath: 'mock',
+      //     mockPath: './mock',
       //     supportTs: false,
       //     localEnabled: isDev,
-      //     prodEnabled: !isDev,
+      //     prodEnabled: false,
       //     //  这样可以控制关闭mock的时候不让mock打包到最终代码内
-      //     injectCode: `
-      //       import { setupProdMockServer } from './mockProdServer';
-      //       setupProdMockServer();
-      //     `,
       // }),
    ],
    optimizeDeps: {

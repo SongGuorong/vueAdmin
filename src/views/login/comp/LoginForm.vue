@@ -2,7 +2,7 @@
   <el-form :model="ruleForm" :rules="rules" ref="validateForm" class="login-ruleForm">
     <el-form-item prop="username">
       <el-input :placeholder="t('login.username')" v-model="ruleForm.username">
-        <template>
+        <template #prefix>  <!-- #prefix 等价于 v-slot:prefix-->
           <icon-user theme="outline" size="16" fill="#999"/>
         </template>
       </el-input>
@@ -10,7 +10,7 @@
 
     <el-form-item prop="password">
       <el-input :placeholder="t('login.password')" type="password" v-model="ruleForm.password" @keyup.enter="handleLogin">
-        <template>
+        <template #prefix>
           <icon-lock theme="outline" size="16" fill="#999"/>
         </template>
       </el-input>
