@@ -3,7 +3,7 @@
   <div class="desc-wrapper">
     <h2 class="title">{{title}}</h2>
     <div class="desc" v-if="showDesc">
-      <slot name="description"></slot>
+      <slot name="description"></slot>  <!--具名插槽-->
     </div>
   </div>
 </template>
