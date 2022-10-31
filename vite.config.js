@@ -57,15 +57,15 @@ export default defineConfig({
       cssCodeSplit: true,
       // chunk 大小警告的限制 kbs
       chunkSizeWarningLimit: 2000,
-      terserOptions: {
-         compress: {
-            keep_infinity: true,
-            // 生产环境的console.*函数不输出
-            drop_console: true,
-            // 删除生产环境的debugger
-            drop_debugger: true,
-         }
-      }
+      // terserOptions: {
+      //    compress: {
+      //       keep_infinity: true,
+      //       // 生产环境的console.*函数不输出
+      //       drop_console: true,
+      //       // 删除生产环境的debugger
+      //       drop_debugger: true,
+      //    }
+      // }
    },
    // 设置路径别名
    resolve: {
@@ -74,6 +74,14 @@ export default defineConfig({
       },
       // 导入时想要省略的扩展名列表
       extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
+   },
+   css: {
+      preprocessorOptions: {
+         // 引入全局公共样式
+         scss: {
+            additionalData: `@use "@/styles/index.scss" as *;`,
+         },
+      },
    },
    plugins: [
       Vue(),
