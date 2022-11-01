@@ -55,7 +55,7 @@ router.beforeEach(async (to, from, next) => {
                });
                next({...to, replace: true,});
             } catch {
-               await store.dispatch('user/resetAccessToken');   // 移除token,包括cookie\
+               await store.dispatch('user/resetAccessToken');   // 移除token,包括cookie
                if (progressBar) NProgress.done();
             }
          }

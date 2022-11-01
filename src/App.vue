@@ -2,7 +2,7 @@
   <div id="app">
     <el-config-provider :locale="localLanguage">
       <el-scrollbar height="100vh" ref="scroll">
-        <router-view/>
+        <router-view></router-view>
       </el-scrollbar>
     </el-config-provider>
   </div>

@@ -167,7 +167,7 @@ const isMobile = computed(() => {
   return store.getters['setting/isMobile'];
 });
 
-const onGetResouceList = () => {
+const onGetResourceList = () => {
   getResourceList().then((res) => {
     const {list, prefix, orderList, skillList} = res.data;
     Object.assign(state, {list, prefix, orderList, skillList});
@@ -179,7 +179,7 @@ const handleToDetail = (url) => {
 };
 
 onBeforeMount(() => {
-  onGetResouceList();
+  onGetResourceList();
 });
 </script>
 

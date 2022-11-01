@@ -3,7 +3,6 @@ import Vue from '@vitejs/plugin-vue';  // 提供 Vue 3 单文件组件支持
 // 按需导入ElementPlus
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
-import {ElementPlusResolver} from 'unplugin-vue-components/resolvers';
 // 按需导入ElementPlus Icons
 import Icons from 'unplugin-icons/vite';
 import IconsResolver from 'unplugin-icons/resolver';
@@ -86,7 +85,6 @@ export default defineConfig({
          imports: ['vue'],
          // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
          resolves: [
-            ElementPlusResolver(),
             // 自动导入图标组件
             IconsResolver({
                prefix: 'Icon',
@@ -100,10 +98,6 @@ export default defineConfig({
             IconsResolver({
                enabledCollections: ['ep'],
             }),
-            // 自动导入 Element Plus 组件
-            ElementPlusResolver({
-               importStyle: "sass",
-            }),
          ],
       }),
       // Icons
@@ -111,13 +105,13 @@ export default defineConfig({
          autoInstall: true,
       }),
       svgBuilder('./src/icons/svg/'),
-      // viteMockServe({
-      //     mockPath: './mock',
-      //     supportTs: false,
-      //     localEnabled: isDev,
-      //     prodEnabled: false,
-      //     //  这样可以控制关闭mock的时候不让mock打包到最终代码内
-      // }),
+      viteMockServe({
+          mockPath: 'mock',
+          supportTs: false,
+          localEnabled: isDev,
+          prodEnabled: false,
+          //  这样可以控制关闭mock的时候不让mock打包到最终代码内
+      }),
    ],
    optimizeDeps: {
       // 检测需要预构建的依赖项

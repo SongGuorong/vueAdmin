@@ -4,12 +4,14 @@ import {getRouterList} from "@/api/router";
 
 // state
 const state = () => ({
-   routes: [], partialRoutes: [],
+   routes: [],
+   partialRoutes: [],
 });
 
 // getters
 const getters = {
-   routes: (state) => state.routes, partialRoutes: (state) => state.partialRoutes,
+   routes: (state) => state.routes,
+   partialRoutes: (state) => state.partialRoutes,
 };
 
 // mutations
