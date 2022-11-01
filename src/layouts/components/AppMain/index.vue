@@ -5,6 +5,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'AppMain',
+};
+</script>
+
 <script setup>
 import {setting} from "@/config/setting";
 import {ref} from "vue";

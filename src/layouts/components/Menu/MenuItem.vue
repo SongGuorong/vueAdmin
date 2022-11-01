@@ -49,6 +49,12 @@
   </el-sub-menu>
 </template>
 
+<script>
+export default {
+  name: 'MenuItem',
+};
+</script>
+
 <script setup>
 import {computed} from 'vue';
 import {useStore} from 'vuex';

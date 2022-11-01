@@ -7,6 +7,12 @@
   </el-breadcrumb>
 </template>
 
+<script>
+export default {
+  name: 'Breadcrumb',
+};
+</script>
+
 <script setup>
 import {computed} from 'vue';
 import {useRouter} from 'vue-router';

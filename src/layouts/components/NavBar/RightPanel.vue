@@ -47,6 +47,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'RightPanel',
+};
+</script>
+
 <script setup>
 import {noticeList} from './data';
 

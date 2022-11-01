@@ -30,6 +30,12 @@
   </el-container>
 </template>
 
+<script>
+export default {
+  name: 'Horizontal',
+};
+</script>
+
 <script setup>
 import {computed, ref} from 'vue';
 import {setting} from '@/config/setting';

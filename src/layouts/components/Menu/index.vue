@@ -25,6 +25,12 @@
   </el-scrollbar>
 </template>
 
+<script>
+export default {
+  name: 'Menu',
+};
+</script>
+
 <script setup>
 import {computed, ref} from 'vue';
 import {useRouter} from 'vue-router';

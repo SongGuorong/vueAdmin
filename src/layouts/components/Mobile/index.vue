@@ -17,6 +17,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'Mobile',
+};
+</script>
+
 <script setup>
 import {computed} from 'vue';
 import {useStore} from 'vuex';

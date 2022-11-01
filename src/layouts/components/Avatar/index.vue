@@ -16,6 +16,12 @@
   </el-dropdown>
 </template>
 
+<script>
+export default {
+  name: 'Avatar',
+};
+</script>
+
 <script setup>
 import {ref} from 'vue';
 import {useStore} from 'vuex';

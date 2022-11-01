@@ -11,7 +11,6 @@ import IconsResolver from 'unplugin-icons/resolver';
 import path from 'path';
 
 const resolve = (dir) => path.resolve(__dirname, dir);
-// const pathSrc = path.resolve(__dirname, 'src');
 // 自定义
 import {svgBuilder} from './src/plugin/svgBuilder';
 // others
@@ -57,15 +56,6 @@ export default defineConfig({
       cssCodeSplit: true,
       // chunk 大小警告的限制 kbs
       chunkSizeWarningLimit: 2000,
-      // terserOptions: {
-      //    compress: {
-      //       keep_infinity: true,
-      //       // 生产环境的console.*函数不输出
-      //       drop_console: true,
-      //       // 删除生产环境的debugger
-      //       drop_debugger: true,
-      //    }
-      // }
    },
    // 设置路径别名
    resolve: {

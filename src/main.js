@@ -14,7 +14,12 @@ import store from '@/store';
 // 根组件
 const app = createApp(App);
 
-// layout components
+// 完整引入element plus
+import ElementPlus from 'element-plus';
+import 'element-plus/dist/index.css';
+app.use(ElementPlus);
+
+// 注册 layout components
 import layoutComp from '@/layouts/components/export';
 layoutComp(app);
 // 注册字节跳动图标

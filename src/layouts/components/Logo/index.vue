@@ -5,6 +5,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'Logo',
+};
+</script>
+
 <script setup>
 import {computed} from 'vue';
 import {useRouter} from 'vue-router';
