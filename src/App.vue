@@ -1,44 +1,63 @@
-<script setup>
-import LoginForm from '@/views/login/comp/LoginForm';
-
-
-
-</script>
-
 <template>
-  <header>
-    <!--    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />-->
-  </header>
-
-  <main>
-  </main>
+  <div id="app">
+    <el-config-provider :locale="localLanguage">
+      <el-scrollbar height="100vh" ref="scroll">
+        <router-view/>
+      </el-scrollbar>
+    </el-config-provider>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script setup>
+import {useStore} from "vuex";   // 在setup钩子函数中访问store
+import {computed, onMounted, ref, watch} from "vue";
+import i18n from "@/locales";
+import {useRouter} from "vue-router";
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+const store = useStore();
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+const locale = i18n.global.locale;
+const localLanguage = computed(() => {
+  const isDev = process.env.NODE_ENV === "development";
+  if (isDev) {
+    return i18n.global.messages.value[locale.value];
+  } else {
+    return i18n.global.messages[locale];  // 支持语言列表
   }
+});   // localLanguage使用computed计算属性编程响应式变量
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+const scroll = ref(null);
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+const router = useRouter();
+onMounted(() => {
+  changeBodyWidth();
+  window.addEventListener('resize', changeResize);
+});
+
+// 监听，路由变化，滚动到最上面
+watch(
+    () => router.currentRoute.value,
+    () => {
+      scroll.value.setScrollTop(0);
+    }
+);
+
+const changeBodyWidth = () => {
+  const flag = document.body.getBoundingClientRect().width - 1 < 992;
+  store.dispatch('setting/changeMobile', flag);   // 判断是否是mobile
+};
+
+const changeResize = () => {
+  changeBodyWidth();
+};
+</script>
+
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-size: $base-font-size-default;
+  color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 </style>
