@@ -11,3 +11,8 @@ export const getPageTitle = (pageTitle) => {
    }
    return `${title}`;
 };
+
+// 获取本地图片
+export const getImageUrl = (name) => {
+   return new URL(`../assets/${name}`, import.meta.url).href;
+}

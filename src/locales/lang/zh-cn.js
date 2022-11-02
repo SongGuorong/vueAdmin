@@ -20,7 +20,7 @@ export default {
     navbar: {
         logOut: '退出登录',
         github: '项目地址',
-        theme: '切换换肤',
+        theme: '主题设置',
         full: '全屏',
         noFull: '退出全屏',
         refresh: '刷新',

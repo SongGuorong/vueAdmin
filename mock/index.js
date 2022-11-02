@@ -1,4 +1,4 @@
-const prefix = 'https://raw.githubusercontent.com/SongGuorong/vueAdmin/master/src/assets';
+const prefix = 'https://raw.githubusercontent.com/SongGuorong/vueAdmin/master/src/assets/';
 const list = [
     {
         title: 'Nutui',

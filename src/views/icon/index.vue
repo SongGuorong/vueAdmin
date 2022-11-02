@@ -1,7 +1,7 @@
 <template>
   <div class="icon-container">
     <Description :title="t('iconPage.title')">
-      <template #Description>
+      <template #description>
         Vue3-admin 推荐使用
         <a href="https://iconpark.oceanengine.com/official" target="_blank">IconPark</a>
         作为图标库
