@@ -1,6 +1,6 @@
 <template>
   <div class="right-panel">
-    <icon-theme
+    <icon-setting
         class="icon-hover theme"
         :title="t('navbar.theme')"
         theme="outline"

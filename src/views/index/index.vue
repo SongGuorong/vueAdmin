@@ -1,5 +1,5 @@
 <template>
-  <div class="index-conntainer">
+  <div class="index-container">
     <div class="head-card">
       <div class="avatar">
         <el-avatar :size="50" :src="avatar"></el-avatar>
@@ -27,7 +27,7 @@
                   :key="index"
               >
                 <div class="lf">
-                  <!-- <img class="img" :src="`${state.prefix}${item.logo}`" /> -->
+                   <img class="img" :src="`${state.prefix}${item.logo}`" />
                   <div class="title" v-if="item.title">{{ item.title }}</div>
                 </div>
                 <div class="desc"> {{ item.desc }}</div>
@@ -107,6 +107,7 @@ export default {
 
 <script setup>
 import {ref, computed, reactive, onBeforeMount} from 'vue';
+import {getImageUrl} from '@/utils/index';
 
 import {CountTo} from 'vue3-count-to';
 import Echarts from '@/components/Echarts/index.vue';
@@ -139,8 +140,10 @@ const thisTime =
                 : hour < 18
                     ? t('sayHi.afternoon')
                     : t('sayHi.evening');
+
 const sayHi = ref(thisTime);
-const avatar = ref('https://i.gtimg.cn/club/item/face/img/2/15922_100.gif');
+const avatar = getImageUrl("avatar.ico");
+// const avatar = ref('https://i.gtimg.cn/club/item/face/img/2/15922_100.gif');
 
 const series2 = reactive([
   {
@@ -167,7 +170,7 @@ const isMobile = computed(() => {
   return store.getters['setting/isMobile'];
 });
 
-const onGetResouceList = () => {
+const onGetResourceList = () => {
   getResourceList().then((res) => {
     const {list, prefix, orderList, skillList} = res.data;
     Object.assign(state, {list, prefix, orderList, skillList});
@@ -179,12 +182,12 @@ const handleToDetail = (url) => {
 };
 
 onBeforeMount(() => {
-  onGetResouceList();
+  onGetResourceList();
 });
 </script>
 
 <style lang="scss" scoped>
-.index-conntainer {
+.index-container {
   width: $base-width;
 
   .head-card {

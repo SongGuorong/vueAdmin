@@ -29,11 +29,12 @@ import {ElMessageBox} from 'element-plus';
 import {setting} from '@/config/setting';
 import {useRouter} from 'vue-router';
 import {useI18n} from 'vue-i18n';
+import {getImageUrl} from '@/utils/index';
 
 const {title, recordRoute} = setting;
 const {t} = useI18n();
-const avatar = ref('https://i.gtimg.cn/club/item/face/img/2/15922_100.gif');
-const userName = ref('雨落川');
+const avatar = getImageUrl("avatar.ico");
+const userName = ref('可达鸭');
 const store = useStore();
 const router = useRouter();
 

@@ -7,7 +7,7 @@
     <div class="login-container">
       <div class="login-left hidden-sm-and-down">
         <div class="login-left-wrap">
-          <img class="img" src="@/assets/login.png" alt="login-bg"/>
+          <img class="img" src="@/assets/Octopus.png" alt="login-bg"/>
           <h2 class="desc">{{ t('login.desc') }}</h2>
           <p class="tip">{{ t('login.tip') }}</p>
         </div>

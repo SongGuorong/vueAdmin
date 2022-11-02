@@ -7,6 +7,7 @@
 
 <script>
 export default {
+  // 组件默认名称
   name: 'AppMain',
 };
 </script>

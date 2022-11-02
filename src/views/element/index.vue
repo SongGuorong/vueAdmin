@@ -1,7 +1,7 @@
 <template>
   <div class="element-container">
     <Description :title="t('element.title')">
-      <template #Description>
+      <template #description>
         Vue3-admin-element-template使用的是
         <a href="https://element-plus.gitee.io/#/zh-CN/component/installation" target="_blank"
         >Element-Plus</a
