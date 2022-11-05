@@ -133,7 +133,7 @@ const defaultActive = computed(() => {
   }
 
   .main {
-    width: calc(90% + 40px);
+    width: calc(95% + 40px);  // 横向内容区宽度
     margin: 50px 20px 0 20px;
 
     &[class='el-main main fixed istag'] {

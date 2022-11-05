@@ -2,7 +2,7 @@
   <div class="admin-container">
     <el-container>
       <el-container class="container">
-        <el-header class="header" height="60px">
+        <el-header class="header">
           <NavBar @handleCollapse="handleCollapse"/>
           <TabBar v-if="tag"/>
         </el-header>

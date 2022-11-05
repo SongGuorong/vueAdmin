@@ -1,4 +1,6 @@
 @import './variable.scss';
+
+// 滚动条设置
 @mixin scrollbar {
     max-height: 88vh;
     margin-bottom: 0.5vh;

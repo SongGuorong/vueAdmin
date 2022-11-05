@@ -320,7 +320,7 @@ export default {
   border-top: 1px solid #f6f6f6;
 
   &.horizontal {
-    padding: 0 40px;
+    padding: 0 40px !important;
   }
 
   :deep(.fold-unfold) {
@@ -352,6 +352,7 @@ export default {
     }
 
     :deep(.el-tabs__header) {
+      margin: 0;
       border-bottom: 0;
 
       .el-tabs__nav {
@@ -365,6 +366,7 @@ export default {
           border: none;
           border-radius: $base-border-radius;
           transition: padding 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+          padding: 0 10px;   // 标签tab左右间距
 
           &.is-active {
             color: $base-color-primary;
