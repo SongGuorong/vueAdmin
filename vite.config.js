@@ -104,7 +104,7 @@ export default defineConfig({
       Icons({
          autoInstall: true,
       }),
-      svgBuilder('./src/icons/svg/'),
+      svgBuilder('./src/assets/svg/'),
       viteMockServe({
           mockPath: 'mock',
           supportTs: false,

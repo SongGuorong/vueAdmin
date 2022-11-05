@@ -4,12 +4,11 @@
     <template v-else>
       <el-container v-if="mode === 'vertical'">
         <Menu :isCollapse="isCollapse" class="hidden-xs-only"/>
-        <el-container class="container" :style="{ left: isCollapse ? '65px' : '240px' }">
+        <el-container class="container" :style="{ left: isCollapse ? '65px' : '205px' }">  <!--收起与展开菜单栏宽度-->
           <el-header
               class="header"
               :class="{ fixed: fixedHead, notag: !tag }"
-              height="60px"
-              :style="{ left: isCollapse ? '65px' : '240px' }"
+              :style="{ left: isCollapse ? '65px' : '205px' }"
           >
             <NavBar @handleCollapse="handleCollapse"/>
             <template v-if="tag">
@@ -21,7 +20,7 @@
           </el-main>
         </el-container>
       </el-container>
-      <Horizontal v-if="mode === 'horizontal'"/>
+      <Horizontal v-if="mode === 'horizontal'"/>   <!--是否横向布局-->
       <el-backtop/>
     </template>
   </div>
@@ -81,19 +80,25 @@ const handleCollapse = () => {
     }
   }
 
+  // 修改内容区padding
+  :deep(.el-main) {
+    --el-main-padding: 20px 10px 10px 10px;
+  }
+
   .main {
     position: relative;
     top: $base-main-vertical-top;
     overflow-y: auto;
 
+    // 固定头部，有标签
     &.fixed {
       top: $base-main-fixed-top;
     }
-
+    // 固定头部无标签
     &[class='el-main main fixed notag'] {
       top: $base-main-vertical-fixed-notag-top;
     }
-
+    // 无固定无标签
     &[class='el-main main notag'] {
       top: $base-main-notag-top;
     }
